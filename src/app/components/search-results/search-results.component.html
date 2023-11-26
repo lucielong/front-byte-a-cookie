@@ -1,0 +1,15 @@
+<div class="search-results">
+    <div *ngIf="filteredRecipes.length > 0">
+        <div class="list_recipes">
+            <app-card (click)="redirectToRecipeDetail(recipe.id)" *ngFor="let recipe of filteredRecipes" [recipe]="recipe"></app-card>
+        </div>
+    </div>
+    <div *ngIf="filteredRecipes.length === 0">
+        <div id="Notfound">
+            <img alt="sadcookie" id="sadcookie" src="./assets/icons/sadcookie.png">
+            <p>We do not have this recipe</p>
+        </div>
+    </div>
+</div>
+
+

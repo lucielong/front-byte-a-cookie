@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+    <img id="recipeImage" mat-card-image [src]="getImageForRecipe(recipe.name)" (error)="setDefaultImage($event)" alt="recipe_image">
+    <header>
+        <h1>{{recipe.name}}</h1>
+    </header>
+    <div class="content">
+        <div id="line1">
+            <div id="level">
+                <div *ngIf="recipe.difficulty === 'HARD'">
+                    <img alt="wisk" src="./assets/icons/whisk.png" wisk>
+                    <img alt="wisk" src="./assets/icons/whisk.png" wisk>
+                    <img alt="wisk" src="./assets/icons/whisk.png" wisk>
+                </div>
+                <div *ngIf="recipe.difficulty === 'MEDIUM'">
+                    <img alt="wisk" src="./assets/icons/whisk.png" wisk>
+                    <img alt="wisk" src="../assets/icons/whisk.png" wisk>
+                </div>
+                <div *ngIf="recipe.difficulty === 'EASY'">
+                    <img alt="wisk" src="./assets/icons/whisk.png" wisk>
+                </div>
+                <p>{{recipe.difficulty}}</p>
+            </div>
+            <div id="rate">
+                <img alt="star" src="./assets/icons/star.png" star>
+                <p>{{recipe.rating}}</p>
+            </div>
+        </div>
+        <div id="time">
+            <img alt="clock" clock src="./assets/icons/clock.png">
+            <p>{{recipe.time}} minutes</p>
+        </div>
+    </div>
+</mat-card>

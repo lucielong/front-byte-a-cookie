@@ -1,0 +1,191 @@
+.recipe {
+  margin: 55px;
+}
+
+.comment-header-right img {
+  width: 15px;
+  height: 15px;
+  padding-top: 9.5px;
+}
+
+.comment-header-right {
+  display: flex;
+}
+
+h1 {
+  font-family: PT Serif, sans-serif !important;
+  font-size: 4em;
+  font-style: italic;
+  padding-top: 25px;
+}
+
+h2 {
+  font-family: PT Serif, sans-serif !important;
+  font-size: 3em;
+  font-style: italic;
+  padding-top: 25px;
+}
+
+#line1 img {
+  width: 30px;
+  height: 30px;
+}
+
+#line1 {
+  display: flex;
+}
+
+#level {
+  display: flex;
+  padding-left: 40px;
+  padding-top: 32px;
+}
+
+#time {
+  display: flex;
+  padding-left: 40px;
+  padding-top: 32px;
+}
+
+#rate {
+  display: flex;
+  padding-left: 40px;
+  padding-top: 32px;
+}
+
+p {
+  font-size: 1.5em;
+  padding-left: 10px;
+  padding-top: 7px;
+}
+
+#line2 img {
+  width: 600px;
+  height: 200px;
+  object-fit: cover;
+}
+
+#line2 {
+  display: flex;
+  padding-top: 20px;
+}
+
+#ingredients {
+  font-size: 0.75em;
+  padding-left: 40px;
+}
+
+#ingredients p {
+  font-family: PT Serif, sans-serif !important;
+}
+
+#instructions {
+  font-size: 0.75em;
+}
+
+#instructions p {
+  font-family: PT Serif, sans-serif !important;
+}
+
+#Feedback {
+  margin: 20px;
+
+  h2 {
+    font-family: PT Serif, sans-serif !important;
+    font-size: 2.25em;
+    font-style: italic;
+    padding-left: 25px;
+    padding-top: 25px;
+  }
+
+  .comment {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &-left {
+        p {
+          font-size: 1.2em;
+          color: #555; /* Adjust color as needed */
+          margin: 0;
+        }
+      }
+
+      &-right {
+        p {
+          font-size: 1.2em;
+          color: #555; /* Adjust color as needed */
+          margin: 0;
+        }
+      }
+    }
+
+    &-body {
+      p {
+        font-size: 1.2em;
+        color: #666; /* Adjust color as needed */
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+button {
+  background-color: #6B5848;
+  border: 2px solid white;
+  border-radius: 17px;
+  width: 225.9px;
+  height: 43.2px;
+  margin-left: 30px;
+  font-family: PT Serif, serif;
+  font-size: 20px;
+  color: white;
+  font-style: italic;
+}
+
+.button:hover {
+  background-color: #4B3727
+}
+
+.button:active {
+  background-color: #4B3727;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+textarea,
+select,
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 2px solid #6B5848;
+  border-radius: 10px;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  color: #6B5848;
+
+  font-style: italic;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+select {
+  margin-right: 10px;
+  background-color: transparent;
+}

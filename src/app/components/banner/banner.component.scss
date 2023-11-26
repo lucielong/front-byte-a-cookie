@@ -1,0 +1,50 @@
+
+.banner {
+  background-color: var(--banner-background);
+  height: initial;
+  padding: 20px;
+  width: 90%;
+  margin: 40px auto;
+  border-radius: 11px;
+  display: flex;
+}
+
+.title {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.title_buttons {
+  flex-grow: 1;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-left: 50px;
+  font-family: 'Moontime', sans-serif;
+  font-size: 65px;
+  color: var(--banner-foreground);
+}
+
+.cookie {
+  max-width: 70px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid var(--banner-foreground);
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  color: white;
+  font-style: italic;
+}
+
+
+
+

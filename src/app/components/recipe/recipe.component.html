@@ -1,0 +1,104 @@
+<div class="recipe">
+    <div id="line1">
+        <h1>{{recipe.name}}</h1>
+        <div id="level">
+            <div *ngIf="recipe.difficulty === 'HARD'">
+                <img alt="whisk" src="../assets/icons/whisk.png">
+                <img alt="whisk" src="../assets/icons/whisk.png">
+                <img alt="whisk" src="../assets/icons/whisk.png">
+            </div>
+            <div *ngIf="recipe.difficulty === 'MEDIUM'">
+                <img alt="whisk" src="../assets/icons/whisk.png">
+                <img alt="whisk" src="../assets/icons/whisk.png">
+            </div>
+            <div *ngIf="recipe.difficulty === 'EASY'">
+                <img alt="whisk" src="../assets/icons/whisk.png">
+            </div>
+            <p>{{recipe.difficulty}}</p>
+        </div>
+        <div id="time">
+            <img alt="time" src="../assets/icons/clock.png">
+            <p>{{recipe.time}} minutes</p>
+        </div>
+        <div id="rate">
+            <img alt="star" src="../assets/icons/star.png">
+            <p>{{recipe.rating}}</p>
+        </div>
+    </div>
+    <div id="line2">
+        <img id="recipeImage" mat-card-image [src]="getImageForRecipe(recipe.name)" (error)="setDefaultImage($event)" alt="recipe_image">
+        <div id="ingredients">
+            <h2>Ingredients</h2>
+            <div *ngFor="let listIngredient of recipe.listIngredients; let i = index">
+                <p> {{listIngredient}}</p>
+            </div>
+        </div>
+    </div>
+    <div id="instructions">
+        <h2>Recipe</h2>
+        <div *ngFor="let step of recipe.steps; let i = index">
+            <p>{{i + 1}}. {{step}}</p>
+        </div>
+    </div>
+    <button (click)="updateRecipe(recipe.id)">Update recipe</button>
+    <button (click)="deleteRecipe(recipe.id)">Delete recipe</button>
+    <div id="Feedback">
+        <h2>Comments</h2>
+        <div *ngFor="let comment of comments" class="comment">
+            <div class="comment-header">
+                <div class="comment-header-left">
+                    <p>
+                        <strong>{{ comment.client.name }}</strong>
+                    </p>
+                </div>
+                <div class="comment-header-right">
+                    <div *ngIf="comment.rating>0.99 && comment.rating<2">
+                        <img alt="star" src="./assets/icons/star.png">
+                    </div>
+                    <div *ngIf="comment.rating>1.99 && comment.rating<3">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                    </div>
+                    <div *ngIf="comment.rating>2.99 && comment.rating<4">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                    </div>
+                    <div *ngIf="comment.rating>3.99 && comment.rating<5">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                    </div>
+                    <div *ngIf="comment.rating>4.99">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                        <img alt="star" src="./assets/icons/star.png">
+                    </div>
+                    <p>{{ comment.rating }}</p>
+                </div>
+            </div>
+            <div class="comment-body">
+                <p>{{ comment.body }}</p>
+            </div>
+        </div>
+        <h2>Add a comment</h2>
+        <form [formGroup]="commentForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Rating</label>
+                <select formControlName="rating">
+                    <option value="1">1 star</option>
+                    <option value="2">2 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="5">5 stars</option>
+                </select>
+                <label>Comment</label>
+                <textarea formControlName="body"></textarea>
+            </div>
+            <button (click)="submitComment()" type="button">Submit</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+app-card {
+  display: inline-flex;
+  margin: 20px;
+}
+
+.list_recipes {
+  margin-left: 150px;
+  margin-top: 75px;
+}
+
+#Notfound p {
+  font-family: PT Serif, sans-serif !important;
+  font-size: 1.75em;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#Notfound img {
+  width: 250px;
+  display: block;
+  margin: auto;
+}

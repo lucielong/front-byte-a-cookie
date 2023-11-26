@@ -1,0 +1,46 @@
+
+.example-card {
+  max-width: 300px;
+}
+
+header h1 {
+  font-family: PT Serif, sans-serif !important;
+  font-size: 2em;
+  font-style: italic;
+  text-align: center;
+}
+
+div p {
+  font-family: Roboto, sans-serif !important;
+  padding-left: 5px;
+}
+
+#line1 {
+  display: flex;
+}
+
+div img {
+  width: 15px;
+  height: 15px;
+  padding-left: 10px;
+}
+
+#recipeImage {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
+
+#level {
+  display: flex;
+}
+
+#time {
+  display: flex;
+}
+
+#rate {
+  display: flex;
+  margin-left: auto;
+  padding-right: 15px;
+}

@@ -1,0 +1,19 @@
+<div class="banner" xmlns="http://www.w3.org/1999/html">
+    <div class="title_buttons">
+        <span (click)="redirectToHome()">
+            <div class="title">
+                <h1>Byte a Cookie</h1>
+                <img class="cookie" alt="cookies" src="../../../assets/icons/cookies.png">
+            </div>
+        </span>
+        <app-buttons></app-buttons>
+    </div>
+    <div class="search-container">
+        <app-search></app-search>
+    </div>
+    <span routerLink="login">
+      <app-profile-banner>
+      </app-profile-banner>
+    </span>
+</div>
+
