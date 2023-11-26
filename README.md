@@ -56,6 +56,8 @@ The app manages four types of objects: the users, the recipes, the ingredients a
 
 ## How to use it
 
+Run `npm install`
+
 
 #### Development server:
 
